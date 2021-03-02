@@ -114,8 +114,14 @@ body {
   width: 100%;
   height: 40px;
 
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
   border: 1px solid var(--form-color);
   border-radius: 4px;
+
+  transition: border-color var(--duration) var(--timing-function);
 }
 
 .form-svg {
@@ -123,16 +129,9 @@ body {
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
-}
 
-/* .form-field:focus-within .form-input {
-  outline: none;
-  border: 1px solid var(--accent-color);
+  transition: fill var(--duration) var(--timing-function);
 }
-
-.form-field:focus-within .form-svg {
-  fill: var(--accent-color);
-} */
 
 .form-input:focus {
   outline: none;
@@ -148,8 +147,15 @@ body {
   resize: none;
   width: 448px;
   height: 120px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
   border: 1px solid var(--form-color);
   border-radius: 4px;
+
+  transition: border-color var(--duration) var(--timing-function);
 }
 
 .form-text::placeholder {
@@ -207,12 +213,16 @@ body {
   width: 16px;
   height: 15px;
 
-  border: 1px solid var(--title-text-color);
+  background-image: url(../images/unchecked.svg);
+  background-size: cover;
+  border-radius: 2px;
 }
 
 .agreement-checkbox:checked + .agreement-text::before {
-  border: none;
-  background-image: url(../images/check.svg);
+  background-color: var(--accent-color);
+  background-image: url(../images/checked.svg);
+  background-size: cover;
+  border-radius: 2px;
 }
 
 .form-btn {
@@ -232,4 +242,8 @@ body {
   border: none;
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.form-btn:active {
+  outline: none;
 }
