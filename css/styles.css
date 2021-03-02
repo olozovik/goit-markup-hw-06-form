@@ -20,6 +20,7 @@
   --backdrop-color: rgba(0, 0, 0, 0.2);
   --form-color: rgb(13%, 13%, 13%, 0.2);
   --placeholder-color: rgba(117, 117, 117, 0.5);
+  --form-btn-bg-color: #188ce8;
 
   --duration: 250ms;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -163,6 +164,11 @@ body {
   border-color: var(--accent-color);
 }
 
+.agreement {
+  margin-bottom: 30px;
+  display: block;
+}
+
 .agreement-text {
   display: flex;
   align-items: center;
@@ -207,4 +213,23 @@ body {
 .agreement-checkbox:checked + .agreement-text::before {
   border: none;
   background-image: url(../images/check.svg);
+}
+
+.form-btn {
+  display: block;
+  margin: 0 auto;
+
+  padding: 10px 55px;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--white-text-color);
+
+  background-color: var(--form-btn-bg-color);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
